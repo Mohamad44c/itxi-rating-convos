@@ -16,9 +16,7 @@ export async function POST(req: Request, res: Response) {
       {
         role: "system",
         content:
-          "You will be provided with data from an excel sheet, your task is to classify each conversation inside the 'Conversation' column and assign a rating that could be either Excellent, Good, Average, Poor, Terrible. Each conversation is between an AI agent and a user" +
-          "You will also need to calculate the cost of the conversation." +
-          "The cost should have the following format: input: 440 tokens / output: 1 token",
+          "You will be provided with a converation between an AI agent and a user, your task is to classify each conversation with either Excellent, Good, Average, Poor, Terrible.",
       },
       ...messages,
     ],
